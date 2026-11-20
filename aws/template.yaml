@@ -1,0 +1,38 @@
+
+# Identify this file as an AWS Serverless Application Model template.
+AWSTemplateFormatVersion: "2010-09-09"
+
+# Enable AWS SAM resources and shorthand definitions.
+Transform: AWS::Serverless-2016-10-31
+
+# Describe the purpose of this infrastructure template.
+Description: >
+  AWS serverless infrastructure for the Webinar Platform.
+  Initial scaffolding only; application resources will be added in later branches.
+
+# Define deployment parameters that can vary between environments.
+Parameters:
+
+  # Identify the environment targeted by a deployment.
+  EnvironmentName:
+
+    # Accept the environment name as a string.
+    Type: String
+
+    # Default to the development environment.
+    Default: dev
+
+    # Restrict deployments to supported environment names.
+    AllowedValues:
+      - dev
+      - staging
+      - prod
+
+    # Explain the purpose of the parameter.
+    Description: Deployment environment name.
+
+# Declare resources managed by this CloudFormation stack.
+Resources: {}
+
+# Declare outputs that other systems can reference.
+Outputs: {}
